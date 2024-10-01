@@ -1,0 +1,40 @@
+html {
+    background: darkgray;
+    
+}
+
+#info {
+    font-style: normal;
+    display: grid !important;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+}
+
+label {
+    display: grid ;
+    
+    label[for="userName"] {
+    
+    grid-area: 1/1/2/2;
+    
+    div{
+        display: inline-grid;
+        margin:0;
+        grid-area: 2/1/2/3; /* eller block, beroende på hur du vill att det ska visas */
+        
+        label[for="userSurname"] {
+            grid-area: 2/1/3/2;
+            
+            /* Om du har några specifika stilar för <p> inuti <label>, kan du lägga till det här */
+            label[for="userSurname"] p {
+                grid-area: 2/2/3/3; /* eller block, beroende på hur du vill att det ska visas */
+            }
+            }
+        }
+    }
+}
+
+
+
+
+
