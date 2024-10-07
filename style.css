@@ -44,7 +44,7 @@ h1 {
       grid-template-rows: repeat(6, 1fr);
       grid-template-columns: repeat(2, 1fr);
 
-      label[for="userName"] {
+      #userName {
         grid-area: 2/1/3/2;
       }
 
@@ -53,7 +53,7 @@ h1 {
         grid-area: 2/2/3/3;
       }
 
-      label[for="userSurname"] {
+      #userSurname {
         grid-area: 3/1/4/2;
       }
 
@@ -61,7 +61,7 @@ h1 {
         margin: 0;
         grid-area: 3/2/4/3;
       }
-      label[for="userAddress"] {
+      #userAddress {
         grid-area: 4/1/5/2;
       }
 
@@ -69,7 +69,7 @@ h1 {
         margin: 0;
         grid-area: 4/2/5/3;
       }
-      label[for="userPostalCode"] {
+      #userPostalCode {
         grid-area: 5/1/6/2;
       }
 
@@ -77,7 +77,7 @@ h1 {
         margin: 0;
         grid-area: 5/2/6/3;
       }
-      label[for="userCity"] {
+      #userCity {
         grid-area: 6/1/7/2;
       }
 
@@ -101,7 +101,7 @@ h1 {
       grid-template-rows: repeat(6, 1fr);
       grid-template-columns: repeat(2, 1fr);
 
-      label[for="userBirth"] {
+      #userBirth {
         grid-area: 2/1/3/2;
       }
 
@@ -110,7 +110,7 @@ h1 {
         grid-area: 2/2/3/3;
       }
 
-      label[for="userSex"] {
+      #userSex {
         grid-area: 3/1/4/2;
       }
 
@@ -118,7 +118,7 @@ h1 {
         margin: 0;
         grid-area: 3/2/4/3;
       }
-      label[for="userPhone"] {
+      #userPhone {
         grid-area: 4/1/5/2;
       }
 
@@ -139,6 +139,8 @@ h1 {
       }
 
       #license {
+        display: flex;
+
         margin: 0;
         grid-area: 6/2/7/3;
       }
@@ -156,9 +158,13 @@ h1 {
   width: auto;
   height: auto;
   display: flex;
-  justify-content: space-around;
-  flex-direction: row-reverse;
+  flex-direction: column;
   border: 0.2rem solid saddlebrown;
+  align-items: center;
+
+  h2 {
+    display: flex;
+  }
 
   #presentationBox {
     width: 45vw;
