@@ -1,178 +1,69 @@
 html {
   background: darkgray;
+  display: inline-block;
 }
+
+/* body */
 body {
-  font-size: clamp(0.39rem, 1.7vw, 1.7rem);
+  font-size: clamp(0.39rem, 1.6vw, 1.7rem);
+  a {
+    display: block;
+    color: #fbfff1;
+    text-decoration: none;
+    text-shadow:
+      -0.5px -0.5px 0 #3c3744,
+      /* Vänster upp */ 0.5px -0.5px 0 #3c3744,
+      /* Höger upp */ -0.5px 0.5px 0 #3c3744,
+      /* Vänster ner */ 0.5px 0.5px 0 #3c3744; /* Höger ner */
+  }
+  a:hover {
+    color: hsl(200, 14%, 85%);
+  }
 }
-h1 {
+.northCon {
+  margin-top: 4vw;
   display: flex;
   justify-content: center;
 }
 
-#north {
-  margin: 3vw 0 0 0;
+.address {
+  display: grid;
+  width: 75vw;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  justify-items: start;
 
-  h2 {
-    margin: 4vw 0 -2vw 8.1vw;
-    font-size: clamp(0.5rem, 2vw, 3rem);
-  }
-
-  .responsiveImage {
-    display: flex;
-    justify-content: space-around;
-    margin: o o o -2vw;
-    width: 15vw;
-    height: auto;
-    border-radius: 50%;
-    object-fit: cover;
-    filter: blur(0.2px);
-    box-shadow: -4px 4px 15px rgba(0, 0, 0, 0.5);
-    transition: filter 0.3s ease; /* Mjuk övergång vid hover */
-  }
-
-  #infobox {
-    /*  border: 0.2rem solid green; */
-    display: flex;
-    justify-content: center;
-
-    #info {
-      width: 30vw;
-      height: 22vw;
-
-      font-style: normal;
-      display: grid !important;
-      grid-template-rows: repeat(6, 1fr);
-      grid-template-columns: repeat(2, 1fr);
-
-      #userName {
-        grid-area: 2/1/3/2;
-      }
-
-      #name {
-        margin: 0;
-        grid-area: 2/2/3/3;
-      }
-
-      #userSurname {
-        grid-area: 3/1/4/2;
-      }
-
-      #surname {
-        margin: 0;
-        grid-area: 3/2/4/3;
-      }
-      #userAddress {
-        grid-area: 4/1/5/2;
-      }
-
-      #address {
-        margin: 0;
-        grid-area: 4/2/5/3;
-      }
-      #userPostalCode {
-        grid-area: 5/1/6/2;
-      }
-
-      #postalCode {
-        margin: 0;
-        grid-area: 5/2/6/3;
-      }
-      #userCity {
-        grid-area: 6/1/7/2;
-      }
-
-      #city {
-        margin: 0;
-        grid-area: 6/2/7/3;
-      }
+  .addressRight {
+    grid-area: 1/4/2/5;
+    p {
+      margin-left: 1.5vw;
     }
   }
-
-  /* infobox right */
-
-  #infoboxRight {
-    #infoRight {
-      width: 30vw;
-      height: 22vw;
-      margin: 0 0 0 4vw;
-
-      font-style: normal;
-      display: grid !important;
-      grid-template-rows: repeat(6, 1fr);
-      grid-template-columns: repeat(2, 1fr);
-
-      #userBirth {
-        grid-area: 2/1/3/2;
-      }
-
-      #birth {
-        margin: 0;
-        grid-area: 2/2/3/3;
-      }
-
-      #userSex {
-        grid-area: 3/1/4/2;
-      }
-
-      #sex {
-        margin: 0;
-        grid-area: 3/2/4/3;
-      }
-      #userPhone {
-        grid-area: 4/1/5/2;
-      }
-
-      #phone {
-        margin: 0;
-        grid-area: 4/2/5/3;
-      }
-      #userMail {
-        grid-area: 5/1/6/2;
-      }
-
-      #mail {
-        margin: 0;
-        grid-area: 5/2/6/3;
-      }
-      #userLicense {
-        grid-area: 6/1/7/2;
-      }
-
-      #license {
-        display: flex;
-
-        margin: 0;
-        grid-area: 6/2/7/3;
-      }
+  .value {
+    margin-right: 4vw;
+    grid-area: 1/5/2/6;
+    p {
+      margin-left: 1.5vw;
     }
   }
 }
 
-#presentationHeader {
-  border: 0.2rem solid green;
-  h2 {
-    font-size: clamp(0.5rem, 2vw, 3rem);
-  }
-}
-#equator {
-  width: auto;
+.responsiveImage {
+  grid-area: 1/3/2/4;
+  margin: o o o -2vw;
+  width: 15vw;
   height: auto;
-  display: flex;
-  flex-direction: column;
-  border: 0.2rem solid saddlebrown;
-  align-items: center;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: blur(0.2px);
+  box-shadow: -4px 4px 15px rgba(0, 0, 0, 0.5);
+  transition: filter 0.3s ease; /*Mjuk övergång vid hover */
+}
 
-  h2 {
-    display: flex;
-  }
+.equator {
+  margin: 7vw;
 
-  #presentationBox {
-    width: 45vw;
-    height: auto;
-    border: 0.2rem solid black;
-    #presentation {
-      border: 0.2rem solid blue;
-      padding: 1rem;
-    }
+  #presentationBody {
+    width: 54vw;
   }
 }
